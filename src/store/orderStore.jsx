@@ -4,7 +4,7 @@ import { ORDER_STATUS, NEXT_STATUS } from '../constants/orderStatus';
 
 export const useOrderStore = create((set, get) => ({
     availableOrders: [],
-    activeOrder: null, // the single order currently accepted / in progress
+    activeOrder: null,
     isLoading: false,
     error: null,
 
@@ -42,7 +42,6 @@ export const useOrderStore = create((set, get) => ({
     },
 
     completeDelivery: () => {
-        // Clears the active order once delivered and acknowledged.
         set({ activeOrder: null });
     },
 }));

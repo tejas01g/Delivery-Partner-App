@@ -10,8 +10,6 @@ export default function OrdersScreen({ navigation }) {
         fetchAvailableOrders();
     }, []);
 
-    // If there's already an order in progress, send the partner straight
-    // to it instead of letting them browse/accept a second one.
     useEffect(() => {
         if (activeOrder) {
             navigation.navigate('ActiveDelivery');
